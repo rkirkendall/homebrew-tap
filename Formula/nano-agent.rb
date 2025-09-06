@@ -5,20 +5,20 @@
 class NanoAgent < Formula
   desc "Nano Agent — image generation and critique CLI for Gemini"
   homepage "https://github.com/rkirkendall/nano-agent"
-  version "0.1.11"
+  version "0.1.12"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.11/nano-agent_darwin_amd64.tar.gz"
-      sha256 "0b7c326cf213496ebec303b863e886c68ca1127804ca855cca69182dc9fe072e"
+      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.12/nano-agent_darwin_amd64.tar.gz"
+      sha256 "8dc499710ab63ce0c6531b60e89cdc92bb20fddf59b673427ca40821093bbc4f"
 
       def install
         bin.install "nano-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.11/nano-agent_darwin_arm64.tar.gz"
-      sha256 "7002fe1e41f5f1000d2ce4843b6b5eef8730322b27e988d50e3882394f1ce4f5"
+      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.12/nano-agent_darwin_arm64.tar.gz"
+      sha256 "0714816871de507c4d4199fab7addde3cb469ad9f5af4c54c5c086c7e37bd194"
 
       def install
         bin.install "nano-agent"
@@ -27,16 +27,16 @@ class NanoAgent < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.11/nano-agent_linux_amd64.tar.gz"
-      sha256 "d4d622922a5fbb2bf5d402b59f5763f5d9450f88e9ebea84184151014bd8a553"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.12/nano-agent_linux_amd64.tar.gz"
+      sha256 "709c71ab5efbd739000c6ab2db8cb9cfd98934f770ffc1f47433339afdc96416"
       def install
         bin.install "nano-agent"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.11/nano-agent_linux_arm64.tar.gz"
-      sha256 "e9359dc58219c1dfe9624f1e0cedca16af35169e9e01c02a52c75597a20d5221"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rkirkendall/nano-agent/releases/download/v0.1.12/nano-agent_linux_arm64.tar.gz"
+      sha256 "c480205ebae556ce9fa2e09e518eda850266d425299552369bfd631d44c3e16c"
       def install
         bin.install "nano-agent"
       end
